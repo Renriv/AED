@@ -67,6 +67,11 @@ public class Main extends javax.swing.JFrame {
 
         btnclear.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
         btnclear.setText("clear");
+        btnclear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnclearActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -154,7 +159,7 @@ public class Main extends javax.swing.JFrame {
             
         }
         
-        
+        //doinh this
         else if (username.equals("ria")&&password.equals("12345")&&usertype.equals("Person")){
         personpage ppage=new personpage();
         ppage.show();
@@ -172,6 +177,13 @@ public class Main extends javax.swing.JFrame {
     private void txtusertypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusertypeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtusertypeActionPerformed
+
+    private void btnclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnclearActionPerformed
+        // TODO add your handling code here:
+        txtusername.setText("");
+        txtpassword.setText("");
+        
+    }//GEN-LAST:event_btnclearActionPerformed
 
     /**
      * @param args the command line arguments
